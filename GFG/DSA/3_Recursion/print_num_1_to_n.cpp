@@ -28,10 +28,36 @@ void printNos(int n)
     }
     
 }
+// Tail recursive version
+// k initialised to 1
+void printNos(int n,int k)
+{
+    if( n == 0)
+        return;
+    cout<<k<<" ";
+    printNos(n-1,k+1);
+}
+
+void printTillNum(int n)
+{
+    //Your code here
+    if( n == 1)
+        return;
+    else
+    {
+        printTillNum(n-1);
+        cout<<n-1<<" ";
+    }
+    
+}
 
 int main()
 {
-    printNos(10);
+    printNos(15);
+    cout<<"\n";
+    printTillNum(15);
+    cout<<"\n";
+    printNos(15,1);
 
     return EXIT_SUCCESS;
 }

@@ -8,7 +8,6 @@
 #define SQ(a) (a)*(a)
 #define toDigit(c) (c-'0')
 #define toCharacterDigit(n) (n + '0')
-#define modVal(a)  a % 1000000007
 
 using namespace std;
 
@@ -18,20 +17,23 @@ typedef unsigned long long ull;
 typedef vector<int> vi;
 typedef pair<int,int> pi;
 
+string getO(int x)
+{
+    if(!x)
+        return "";
+    return "o" + getO( x - 1);
+}
 
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
+    int x;
+    cin >> x;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-    while(t--)
-    {
-
-    }
+    cout<<"W"<<getO(x)<<"w"<<"\n";
 
     return EXIT_SUCCESS;
 }

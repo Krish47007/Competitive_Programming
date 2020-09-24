@@ -18,21 +18,24 @@ typedef unsigned long long ull;
 typedef vector<int> vi;
 typedef pair<int,int> pi;
 
+void printNum()
+{
+    int n;
+    cin>>n;
+
+    if(n == 42)
+        return;
+    
+    cout<<n<<"\n";
+    printNum();
+}
 
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-    while(t--)
-    {
-
-    }
-
+    printNum();
     return EXIT_SUCCESS;
 }
 

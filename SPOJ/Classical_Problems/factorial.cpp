@@ -18,6 +18,11 @@ typedef unsigned long long ull;
 typedef vector<int> vi;
 typedef pair<int,int> pi;
 
+int Z(int n)
+{
+    
+}
+
 
 int main()
 {

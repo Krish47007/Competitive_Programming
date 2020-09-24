@@ -8,7 +8,6 @@
 #define SQ(a) (a)*(a)
 #define toDigit(c) (c-'0')
 #define toCharacterDigit(n) (n + '0')
-#define modVal(a)  a % 1000000007
 
 using namespace std;
 
@@ -18,6 +17,14 @@ typedef unsigned long long ull;
 typedef vector<int> vi;
 typedef pair<int,int> pi;
 
+string printHalf(string& s,int i)
+{
+    if(s.length() == 1)
+        return s;
+    if( i >= s.length()/2)
+        return "";
+    return s[i] + printHalf(s,i+2);
+}
 
 int main()
 {
@@ -30,7 +37,10 @@ int main()
 
     while(t--)
     {
+        string s;
+        getline(cin,s);
 
+        cout<<printHalf(s,0)<<"\n";
     }
 
     return EXIT_SUCCESS;

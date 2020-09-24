@@ -19,6 +19,16 @@ typedef vector<int> vi;
 typedef pair<int,int> pi;
 
 
+int reverse(int n,int rev)
+{
+    if(n <= 9)
+        return rev*10 + n;
+
+    return  reverse(n/10,rev*10 + n%10);
+
+}
+
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -30,7 +40,9 @@ int main()
 
     while(t--)
     {
-
+        int x,y;
+        cin>>x>>y;
+        cout<<reverse(reverse(x,0) + reverse(y,0),0)<<"\n";
     }
 
     return EXIT_SUCCESS;
